@@ -53,4 +53,3 @@ def game(): #user
     #print(rule('rock', 'paper'))
     #print(rule('rock', 'scissors'))
     #print(rule('rock', 'rock'))
-game()
