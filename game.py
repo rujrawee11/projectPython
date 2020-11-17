@@ -8,7 +8,7 @@ def game(master):  # user
     # จำนวนครั้งแพ้ชนะแก้เก็บแค่score ต่าสถิติ
     print('game')
     p1_stat = {'WINS': 0, 'LOSSES': 0, 'TIES': 0}
-
+    #สวัสดีไทยเเลนด์
     def rule(p1_shape, p2_shape):  # ฟังก์ชันสำหรับหาว่าใครชนะใครแพ้
         if p1_shape == p2_shape:
             p1_stat['TIES'] += 1
