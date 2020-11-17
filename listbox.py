@@ -1,7 +1,6 @@
 from tkinter import *
 ans = ""
 listbox = ""
-
 def listbox():
     """listbook"""
     #tiger
