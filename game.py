@@ -8,13 +8,13 @@ def game(master):  # user
     # จำนวนครั้งแพ้ชนะแก้เก็บแค่score ต่าสถิติ
     print('game')
     p1_stat = {'WINS': 0, 'LOSSES': 0, 'TIES': 0}
-    #สวัสดีไทยเเลนด์
+
     def rule(p1_shape, p2_shape):  # ฟังก์ชันสำหรับหาว่าใครชนะใครแพ้
         if p1_shape == p2_shape:
             p1_stat['TIES'] += 1
             return "TIED"
         elif (p1_shape == 'ROCK' and p2_shape == "SCISSORS") or (p1_shape == "PAPER"
-            and p2_shape == 'ROCK') or (p1_shape == "SCISSORS" and p2_shape == "PAPER"):
+                                                                 and p2_shape == 'ROCK') or (p1_shape == "SCISSORS" and p2_shape == "PAPER"):
             p1_stat['WINS'] += 1
             return "PLAYER WON"
         else:
@@ -31,7 +31,8 @@ def game(master):  # user
         tv_score.set(f'Score : {p1_stat["WINS"]}')
         # combolistชื่อ
         tv_result.set(f'PLAYER : {p1_shape} - COM : {p2_shape} -> {result}')
-        tv_stat.set(f'{p1_stat["WINS"]} wins, {p1_stat["TIES"]} ties, {p1_stat["LOSSES"]} losses')
+        tv_stat.set(
+            f'{p1_stat["WINS"]} wins, {p1_stat["TIES"]} ties, {p1_stat["LOSSES"]} losses')
     # root = Tk()  # หน้าต่างของรูปที่จะกดปุ่ม
     master.title("GAME")
     master.geometry("500x400")
@@ -57,48 +58,45 @@ def game(master):  # user
           width=50).pack()  # scoreจะใส่bg
     Label(f2, textvariable=tv_stat, fg="blue", width=50,
           bg='gold', height=1).pack()  # จำนวนครั้งที่เล่นไปแล้ว
-    Button(master, text="Quit", command=master.destroy).pack()
+    Button(master, text="Quit", width=10, heigth=5, achor='w', command=master.destroy).pack()
     master.mainloop()
 
 
-class StartButton:
+class CustomCmd:
     def __init__(self, master):
         self.master = master
-        self.frame = Frame(self.master)
-        self.b = Button(self.frame, text="START", width=20, height=5, fg="blue", bg="red", command=self.startbutton)
-        self.b.pack(padx=30, pady=200)
-        self.frame.pack()
 
-    def startbutton(self):
+    def start(self):
         # self.master.withdraw()
         self.newWindow = Toplevel(self.master)
         game(self.newWindow)
 
 
-def startbutton(self):
-    """start menu in button menu"""
-    # game()
-    self.master.withdraw()
-    self.newWindow = Toplevel(self.master)
-    
-
-def buttonmenu(frame):
-    """button menu"""
-    buttonstart = Button(frame, text="START", width=20, height=5, fg="blue", bg="red", command=startbutton)  # fgอักษร, bgพื้นหลังปุ่ม command เรียกคำสั่งใช้ปุ่ม
-    buttonstart.pack(padx=30, pady=200)  # ที่วางปุ่มตำเเหน่งเทียบจากframe
-
-
 def menu():
     """start menu"""
     root = Tk()  # สร้างหน้าต่าง
-    root.title("MENU")  # ชื่อเกม
+    root.title("Rock Paper Scissors Game")  # ชื่อเกม
     root.geometry("600x500")  # ขนาดจอ
     root.option_add("*font", "tahoma 10 bold")  # font
-    frame = Frame(root)  # สร้างเฟรม
-    frame.config(background="green")  # สีพื้นหลัง
-    frame.place(width=600, height=500, x=0, y=0)  # จัดวางเฟรม
-    # buttonmenu(frame)#เรียกปุ่มbuttonstart ของframe
-    StartButton(root)
+
+    canvas = Canvas(root, width=600, height=500)
+    canvas.pack()
+
+    photo = ImageTk.PhotoImage(Image.open('images/bg.png'))
+    canvas.create_image(300, 250, image=photo)
+
+    gameTitle = Label(root, text="Rock Paper Scissors Game", bg='#138fa9', fg='white', font=("Helvetica", 30))
+    canvas.create_window(300, 60, anchor='center', window=gameTitle)
+
+    cmd = CustomCmd(root)
+    startBtnImg = ImageTk.PhotoImage(Image.open('images/start.png'))
+    startBtn = Button(root, text="Start", bg='#138fa9', image=startBtnImg , borderwidth=0, command=cmd.start, anchor='center')
+    canvas.create_window(300, 345, anchor='center', window=startBtn)
+
+    quitBtnImg = ImageTk.PhotoImage(Image.open('images/quit.png'))
+    quitBtn = Button(root, text="Quit", bg='#138fa9', image=quitBtnImg , borderwidth=0, command=root.quit, anchor='center')
+    canvas.create_window(300, 440, anchor='center', window=quitBtn)
+
     root.mainloop()  # แสดงผลหน้าต่าง
 
 
