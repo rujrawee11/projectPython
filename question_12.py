@@ -1,5 +1,5 @@
 from tkinter import*
-def checkbox():
+def checkbox(): #12
     root = Tk()
     root.title("checkbox")
     root.geometry("600x500")
