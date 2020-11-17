@@ -1,4 +1,4 @@
-#questin7
+#Question7
 from tkinter import *
 def radiobutton():
     """1 ans"""
