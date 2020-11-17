@@ -1,15 +1,21 @@
 from tkinter import *
+def a():
+    #command = main(root).quit หาตัวกดแล้วออก จากหน้านี้ครั้งเดียว
+
 def main():  
     def sel():
         """1 ans"""
         if str(ans.get()) == "1":
-            print("yes")
+            a()#เรียกscore ซิงกับอีกหน้า
         elif str(ans.get()) == "2":
             print("no")
+            a()
         elif str(ans.get()) == "3":
             print("no")
+            a()
         elif str(ans.get()) == "4":
             print("no")
+            a()
     root = Tk()
     root.title("question")  # ชื่อ
     root.geometry("600x500")
