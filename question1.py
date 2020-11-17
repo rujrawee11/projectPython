@@ -1,5 +1,5 @@
 from tkinter import *
-def a():
+#def a():
     #command = main(root).quit หาตัวกดแล้วออก จากหน้านี้ครั้งเดียว
 
 def main():  
