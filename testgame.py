@@ -13,6 +13,7 @@ def game(master):  # user
     def rule(p1_shape, p2_shape):  # ฟังก์ชันสำหรับหาว่าใครชนะใครแพ้
         if p1_shape == p2_shape:
             p1_stat['TIES'] += 1
+            question1()
             return "TIED"
         elif (p1_shape == 'ROCK' and p2_shape == "SCISSORS") or (p1_shape == "PAPER"
             and p2_shape == 'ROCK') or (p1_shape == "SCISSORS" and p2_shape == "PAPER"):
@@ -21,7 +22,7 @@ def game(master):  # user
             return "PLAYER WON"
         else:
             p1_stat['LOSSES'] += 1
-            question1()
+            p1_stat['SCORE'] -= 1
             return "PLAYER LOST"
 
     def on_click(e):
@@ -60,9 +61,8 @@ def game(master):  # user
           width=50).pack()  # scoreจะใส่bg
     Label(f2, textvariable=tv_stat, fg="blue", width=50,
           bg='gold', height=1).pack()  # จำนวนครั้งที่เล่นไปแล้ว
-    Button(master, text="Quit", width=10, heigth=5, achor='w', command=master.destroy).pack()
+    Button(master, text="Quit", width=10, height=5, anchor='w', command=master.destroy).pack()
     master.mainloop()
-
 
 class CustomCmd:
     def __init__(self, master):
@@ -73,20 +73,25 @@ class CustomCmd:
         self.newWindow = Toplevel(self.master)
         game(self.newWindow)
 
-def question1():  
+def question1():
     def sel():
         """1 ans"""
+
         if str(var.get()) == "1":
-            print("YES")
+            return "yes"
+
 
         elif str(var.get()) == "2":
             print("no")
 
+
         elif str(var.get()) == "3":
             print("no")
+
             
         elif str(var.get()) == "4":
             print("no")
+
     root = Tk()
     root.title("question")  # ชื่อ
     root.geometry("600x500")
