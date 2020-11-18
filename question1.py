@@ -1,21 +1,19 @@
 from tkinter import *
-#def a():
-    #command = main(root).quit หาตัวกดแล้วออก จากหน้านี้ครั้งเดียว
 
-def main():  
+def question1():  
     def sel():
         """1 ans"""
-        if str(ans.get()) == "1":
-            a()#เรียกscore ซิงกับอีกหน้า
-        elif str(ans.get()) == "2":
+        if str(var.get()) == "1":
+            print("YES")
+
+        elif str(var.get()) == "2":
             print("no")
-            a()
-        elif str(ans.get()) == "3":
+
+        elif str(var.get()) == "3":
             print("no")
-            a()
-        elif str(ans.get()) == "4":
+            
+        elif str(var.get()) == "4":
             print("no")
-            a()
     root = Tk()
     root.title("question")  # ชื่อ
     root.geometry("600x500")
@@ -28,21 +26,18 @@ def main():
     label1.grid(column=0, row=0, columnspan=2, padx=15, pady=30)
     label2 = Label(frame, text="ข้อใดคือผลลัพธ์ของการคำนวณต่อไปนี้ (8+3)*2-9/3 ?",width=50, height=5, bg="white")
     label2.grid(column=0, row=1, columnspan=3, padx=10, pady=3)
-    ans = IntVar()
-    r1 = Radiobutton(frame, text="19", width=15, height=3, variable=ans, value=1,
+    var = IntVar()
+    r1 = Radiobutton(frame, text="19", width=15, height=3, variable=var, value=1,
                      bg="white", activebackground='green', command=sel)  # คำตอบแรก active bg = เปลี่ยนสีปุ่มตอนกด
     r1.grid(column=0, row=2, padx=75, pady=30,)
-    r2 = Radiobutton(frame, text="33", width=15, height=3,variable=ans, value=2, bg="white", activebackground='red',command = sel)  # คำตอบสอง
+    r2 = Radiobutton(frame, text="33", width=15, height=3,variable=var, value=2, bg="white", activebackground='red',command = sel)  # คำตอบสอง
     r2.grid(column=1, row=2, padx=75, pady=15)
-    r3 = Radiobutton(frame, text="22", width=15, height=3,variable=ans, value=3, bg="white", activebackground='red',command = sel)  # คำตอบสาม
+    r3 = Radiobutton(frame, text="22", width=15, height=3,variable=var, value=3, bg="white", activebackground='red',command = sel)  # คำตอบสาม
     r3.grid(column=0, row=3, padx=15, pady=15)
-    r4 = Radiobutton(frame, text="-11", width=15, height=3, variable=ans,
+    r4 = Radiobutton(frame, text="-11", width=15, height=3, variable=var,
                      value=4, bg="white", activebackground='red', command=sel)  # คำตอบสาม
     r4.grid(column=1, row=3, padx=15, pady=15)
-
     label = Label(root)
     label.pack()
     root.mainloop()
-
-
 main()
