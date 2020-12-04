@@ -1,6 +1,19 @@
 from tkinter import *
-def radiobutton():
-    """1 ans"""
+
+# def question2():  
+#     def sel():
+#         """1 ans"""
+#         if str(var.get()) == "1":
+#             print("YES")
+
+#         elif str(var.get()) == "2":
+#             print("no")
+
+#         elif str(var.get()) == "3":
+#             print("no")
+            
+#         elif str(var.get()) == "4":
+#             print("no")
     root = Tk()
     root.title("question")#ชื่อ
     root.geometry("600x500")
@@ -14,15 +27,19 @@ def radiobutton():
     label2 = Label(frame, text="จงตอบผลลัพธ์​ของ function ตามนี้ \nint(3), float(3.14), str('Hello')​", width=50, height = 5, bg="white")
     label2.grid(column=0, row=1, columnspan=3, padx=10,pady=3)
     var = IntVar()
-    r1 = Radiobutton(frame, text="3, 3.14, Hello", width=15, height=3, variable=var, value=1)#คำตอบแรก
+    r1 = Radiobutton(frame, text="3, 3.14, Hello", width=15, height=3, variable=var, value=1,\
+                    # bg="white", activebackground='green', command=sel)#คำตอบแรก
     r1.grid(column=0, row=2, padx=75, pady=30)
-    r2 = Radiobutton(frame, text="3, 3, 'Hello'", width=15, height=3 ,variable=var, value=2)  # คำตอบสอง
+    r2 = Radiobutton(frame, text="3, 3, 'Hello'", width=15, height=3 ,variable=var, value=2, \
+                    # bg="white", activebackground='red',command = sel)  # คำตอบสอง
     r2.grid(column=1, row=2, padx=75, pady=15)
-    r3 = Radiobutton(frame, text="3, 3, Hello", width=15, height=3, variable=var, value=3)  # คำตอบสาม
+    r3 = Radiobutton(frame, text="3, 3, Hello", width=15, height=3, variable=var, value=3, \
+                    # bg="white", activebackground='red',command = sel)  # คำตอบสาม
     r3.grid(column=0, row=3, padx=15, pady=15)
-    r4 = Radiobutton(frame, text="Errors", width=15, height=3, variable=var, value=4)  # คำตอบสาม
+    r4 = Radiobutton(frame, text="Errors", width=15, height=3, variable=var, value=4, \
+                    # bg="white", activebackground='red',command = sel)  # คำตอบสาม
     r4.grid(column=1, row=3, padx=15, pady=15)
-    var.set(1)
-    var.set(1)
-    root.mainloop()
-radiobutton()
+    # label = Label(root)
+    # label.pack()
+    # root.mainloop()
+question2()
