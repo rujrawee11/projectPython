@@ -31,8 +31,7 @@ def game(master):  # user
         tv_score.set(f'Score : {p1_stat["WINS"]}')
         # combolistชื่อ
         tv_result.set(f'PLAYER : {p1_shape} - COM : {p2_shape} -> {result}')
-        tv_stat.set(
-            f'{p1_stat["WINS"]} wins, {p1_stat["TIES"]} ties, {p1_stat["LOSSES"]} losses')
+        tv_stat.set(f'{p1_stat["WINS"]} wins, {p1_stat["TIES"]} ties, {p1_stat["LOSSES"]} losses')
     # root = Tk()  # หน้าต่างของรูปที่จะกดปุ่ม
     master.title("GAME")
     master.geometry("500x400")
