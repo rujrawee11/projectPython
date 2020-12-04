@@ -3,7 +3,7 @@ import random
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
-
+global scores
 def game(master):  # user
     # จำนวนครั้งแพ้ชนะแก้เก็บแค่score ต่าสถิติ
     print('game')
@@ -14,7 +14,7 @@ def game(master):  # user
             p1_stat['TIES'] += 1
             return "TIED"
         elif (p1_shape == 'ROCK' and p2_shape == "SCISSORS") or (p1_shape == "PAPER"
-                                                                 and p2_shape == 'ROCK') or (p1_shape == "SCISSORS" and p2_shape == "PAPER"):
+            and p2_shape == 'ROCK') or (p1_shape == "SCISSORS" and p2_shape == "PAPER"):
             p1_stat['WINS'] += 1
             return "PLAYER WON"
         else:
