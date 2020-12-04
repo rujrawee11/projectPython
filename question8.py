@@ -1,6 +1,19 @@
 #Question8
 from tkinter import *
-def radiobutton():
+def question8():  
+    def sel():
+        """1 ans"""
+        if str(var.get()) == "1":
+            print("no")
+
+        elif str(var.get()) == "2":
+            print("no")
+
+        elif str(var.get()) == "3":
+            print("YES")
+            
+        elif str(var.get()) == "4":
+            print("no")
     """1 ans"""
     root = Tk()
     root.title("question")#ชื่อ
@@ -15,14 +28,19 @@ def radiobutton():
     label2 = Label(frame, text=' x = "1"\ny = "2"\nprint(x+y)\nผลลัพธ์ตามโปรแกรมนี้คือข้อใด ?', width=50, height = 5, bg="white")
     label2.grid(column=0, row=1, columnspan=3, padx=10,pady=3)
     var = IntVar()
-    r1 = Radiobutton(frame, text="x+y", width=15, height=3, variable=var, value=1)#คำตอบแรก
+    r1 = Radiobutton(frame, text="x+y", width=15, height=3, variable=var, value=1,
+                    bg="white", activebackground='red', command=sel)#คำตอบแรก
     r1.grid(column=0, row=2, padx=75, pady=30)
-    r2 = Radiobutton(frame, text="1+2", width=15, height=3 ,variable=var, value=2)  # คำตอบสอง
+    r2 = Radiobutton(frame, text="1+2", width=15, height=3 ,variable=var, value=2,
+                    bg="white", activebackground='red', command=sel)  # คำตอบสอง
     r2.grid(column=1, row=2, padx=75, pady=15)
-    r3 = Radiobutton(frame, text="12", width=15, height=3, variable=var, value=3)  # คำตอบสาม
+    r3 = Radiobutton(frame, text="12", width=15, height=3, variable=var, value=3,
+                    bg="white", activebackground='green', command=sel)  # คำตอบสาม
     r3.grid(column=0, row=3, padx=15, pady=15)
-    r4 = Radiobutton(frame, text="3", width=15, height=3, variable=var, value=4)  # คำตอบสาม
+    r4 = Radiobutton(frame, text="3", width=15, height=3, variable=var, value=4,
+                    bg="white", activebackground='red', command=sel)  # คำตอบสาม
     r4.grid(column=1, row=3, padx=15, pady=15)
-    var.set(1)
+    label = Label(root)
+    label.pack()
     root.mainloop()
-radiobutton()
+question8()
