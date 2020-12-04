@@ -3,7 +3,7 @@ from PIL import Image, ImageTk
 
 def question2():  
     def sel():
-        """1 ans"""
+        """1 ans""" #fd
         if str(var.get()) == "1":
             print("YES")
 
