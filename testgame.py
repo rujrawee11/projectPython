@@ -1,4 +1,3 @@
-  
 """check"""
 import random
 from tkinter import *
@@ -9,11 +8,9 @@ def game(master):  # user
     # จำนวนครั้งแพ้ชนะแก้เก็บแค่score ต่าสถิติ
     print('game')
     p1_stat = {'WINS': 0, 'LOSSES': 0, 'TIES': 0, 'SCORE': 0}
-
     def rule(p1_shape, p2_shape):  # ฟังก์ชันสำหรับหาว่าใครชนะใครแพ้
         if p1_shape == p2_shape:
             p1_stat['TIES'] += 1
-            question1()
             return "TIED"
         elif (p1_shape == 'ROCK' and p2_shape == "SCISSORS") or (p1_shape == "PAPER"
             and p2_shape == 'ROCK') or (p1_shape == "SCISSORS" and p2_shape == "PAPER"):
@@ -22,7 +19,10 @@ def game(master):  # user
             return "PLAYER WON"
         else:
             p1_stat['LOSSES'] += 1
-            p1_stat['SCORE'] -= 1
+            if  p1_stat['SCORE'] == 0:
+                 p1_stat['SCORE'] = 0
+            else:
+                 p1_stat['SCORE'] -= 1
             return "PLAYER LOST"
 
     def on_click(e):
@@ -64,6 +64,17 @@ def game(master):  # user
     Button(master, text="Quit", width=10, height=5, anchor='w', command=master.destroy).pack()
     master.mainloop()
 
+def imge(master):
+    #root = Tk()  # สร้างหน้าต่าง
+    master.title("Instuction")  # ชื่อเกม
+    master.geometry("600x500")
+    master.option_add("*font", "tahoma 10 bold")
+    canvas = Canvas(master, width=600, height=500)
+    canvas.pack()
+    photo = ImageTk.PhotoImage(Image.open('Home.png'))
+    canvas.create_image(300, 250, image=photo)
+    master.mainloop()
+
 class CustomCmd:
     def __init__(self, master):
         self.master = master
@@ -72,23 +83,24 @@ class CustomCmd:
         # self.master.withdraw()
         self.newWindow = Toplevel(self.master)
         game(self.newWindow)
+    
+    def start1(self):
+        # self.master.withdraw()
+        self.newWindow = Toplevel(self.master)
+        imge(self.newWindow)
 
 def question1():
     def sel():
         """1 ans"""
-
         if str(var.get()) == "1":
-            return "yes"
-
+            print("YES")
 
         elif str(var.get()) == "2":
             print("no")
 
-
         elif str(var.get()) == "3":
             print("no")
 
-            
         elif str(var.get()) == "4":
             print("no")
 
@@ -96,42 +108,54 @@ def question1():
     root.title("question")  # ชื่อ
     root.geometry("600x500")
     root.option_add("*font", "Opun-Mai-Thin 10 bold")
-    frame = Frame(root)
-    frame.config(background="#FFCDCD")
-    frame.place(width=600, height=500, x=0, y=0)
-    root.option_add("*foreground", "navy")
-    label1 = Label(frame, text="QUESTION ?", width=15, height=2, bg="white")
-    label1.grid(column=0, row=0, columnspan=2, padx=15, pady=30)
-    label2 = Label(frame, text="ข้อใดคือผลลัพธ์ของการคำนวณต่อไปนี้ (8+3)*2-9/3 ?",width=50, height=5, bg="white")
-    label2.grid(column=0, row=1, columnspan=3, padx=10, pady=3)
+
+    canvas = Canvas(root, width=600, height=500)
+    canvas.pack()
+
+    photo = ImageTk.PhotoImage(Image.open('Q2.png'))
+    canvas.create_image(300, 250, image=photo)
+    #frame = Frame(root)
+    #frame.config(background="#FFCDCD")
+    #frame.place(width=600, height=500, x=0, y=0)
+    #root.option_add("*foreground", "navy")
+    # label1 = Label(root, text="QUESTION ?", width=15, height=2, bg="white")
+    # canvas.create_window(300, 40, anchor='center', window=label1)
+    #label1.grid(column=0, row=0, columnspan=2, padx=15, pady=30)
+    label2 = Label(root, text="ข้อใดคือผลลัพธ์ของการคำนวณต่อไปนี้ (8+3)*2-9/3 ?",width=50, height=5, bg="white")
+    canvas.create_window(300, 105, anchor='center', window=label2)
+    #label2.grid(column=0, row=1, columnspan=3, padx=10, pady=3)
     var = IntVar()
-    r1 = Radiobutton(frame, text="19", width=15, height=3, variable=var, value=1,
+    r1 = Radiobutton(root, text="19", width=15, height=3, variable=var, value=1,
                      bg="white", activebackground='green', command=sel)  # คำตอบแรก active bg = เปลี่ยนสีปุ่มตอนกด
-    r1.grid(column=0, row=2, padx=75, pady=30,)
-    r2 = Radiobutton(frame, text="33", width=15, height=3,variable=var, value=2, bg="white", activebackground='red',command = sel)  # คำตอบสอง
-    r2.grid(column=1, row=2, padx=75, pady=15)
-    r3 = Radiobutton(frame, text="22", width=15, height=3,variable=var, value=3, bg="white", activebackground='red',command = sel)  # คำตอบสาม
-    r3.grid(column=0, row=3, padx=15, pady=15)
-    r4 = Radiobutton(frame, text="-11", width=15, height=3, variable=var,
+    canvas.create_window(300, 190, anchor='center', window=r1)
+    #r1.grid(column=0, row=2, padx=75, pady=30,)
+    r2 = Radiobutton(root, text="33", width=15, height=3,variable=var, value=2, bg="white", activebackground='red',command = sel)  # คำตอบสอง
+    canvas.create_window(300, 260, anchor='center', window=r2)
+    #r2.grid(column=1, row=2, padx=75, pady=15)
+    r3 = Radiobutton(root, text="22", width=15, height=3,variable=var, value=3, bg="white", activebackground='red',command = sel)  # คำตอบสาม
+    canvas.create_window(300, 330, anchor='center', window=r3)
+    #r3.grid(column=0, row=3, padx=15, pady=15)
+    r4 = Radiobutton(root, text="-11", width=15, height=3, variable=var,
                      value=4, bg="white", activebackground='red', command=sel)  # คำตอบสาม
-    r4.grid(column=1, row=3, padx=15, pady=15)
+    canvas.create_window(300, 400, anchor='center', window=r4)
+    #r4.grid(column=1, row=3, padx=15, pady=15)
     label = Label(root)
     label.pack()
     root.mainloop()
+
 def menu():
     """start menu"""
     root = Tk()  # สร้างหน้าต่าง
     root.title("Rock Paper Scissors Game")  # ชื่อเกม
     root.geometry("600x500")  # ขนาดจอ
     root.option_add("*font", "tahoma 10 bold")  # font
-
     canvas = Canvas(root, width=600, height=500)
     canvas.pack()
-
+    
     photo = ImageTk.PhotoImage(Image.open('images/bg.png'))
     canvas.create_image(300, 250, image=photo)
 
-    gameTitle = Label(root, text="Rock Paper Scissors Game", bg='#138fa9', fg='white', font=("Helvetica", 30))
+    gameTitle = Label(root, text="Rock Paper Scissors Game", bg='#138fa9', fg='white', font=("Adobe Gothic Std B", 30))
     canvas.create_window(300, 60, anchor='center', window=gameTitle)
 
     cmd = CustomCmd(root)
@@ -143,7 +167,9 @@ def menu():
     quitBtn = Button(root, text="Quit", bg='#138fa9', image=quitBtnImg , borderwidth=0, command=root.quit, anchor='center')
     canvas.create_window(300, 440, anchor='center', window=quitBtn)
 
+    nextBtnImg = ImageTk.PhotoImage(Image.open('how.png'))
+    nextBtn = Button(root, text="Instruction", bg='#138fa9', image=nextBtnImg , borderwidth=0, command=cmd.start1, anchor='s')
+    canvas.create_window(150, 485, anchor='s', window=nextBtn)
     root.mainloop()  # แสดงผลหน้าต่าง
-
 
 menu()
