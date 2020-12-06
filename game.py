@@ -57,7 +57,7 @@ def game(master):  # user
           width=50).pack()  # scoreจะใส่bg
     Label(f2, textvariable=tv_stat, fg="blue", width=50,
           bg='gold', height=1).pack()  # จำนวนครั้งที่เล่นไปแล้ว
-    Button(master, text="Quit", width=10, heigth=5, achor='w', command=master.destroy).pack()
+    Button(master, text="Quit", width=10, height=5, anchor='w', command=master.destroy).pack()
     master.mainloop()
 
 
