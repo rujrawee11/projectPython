@@ -4,16 +4,16 @@ from PIL import Image, ImageTk
 def question12():  
     def sel():
         """1 ans"""
-        if str(var1.get()) == "1":
+        if str(var.get()) == "1":
             print("no")
 
-        elif str(var2.get()) == "2":
+        elif str(var.get()) == "2":
             print("yes")
 
-        elif str(var3.get()) == "3":
+        elif str(var.get()) == "3":
             print("no")
             
-        elif str(var4.get()) == "4":
+        elif str(var.get()) == "4":
             print("no")
 
     root = Tk()

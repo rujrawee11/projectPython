@@ -1,6 +1,5 @@
 from tkinter import *
 from PIL import Image, ImageTk
-
 def question1():
     def sel(): #ฟังก์ชัน
         """1 ans"""
