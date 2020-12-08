@@ -75,60 +75,60 @@ questions = [
        "text": " x = "1"\ny = "2"\nprint(x+y)\nผลลัพธ์ตามโปรแกรมนี้คือข้อใด ?", # ข้อคำถาม8
         "bg": "Q2",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
         "choices": [ 
-            { "text": "x+y": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
-            { "text": "1+2": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            { "text": "12": 3, "isAnswer": True }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            { "text": "3": 4, "isAnswer": False }
+            { "text": "x+y", "id": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
+            { "text": "1+2", "id": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            { "text": "12", "id": 3, "isAnswer": True }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            { "text": "3", "id": 4, "isAnswer": False }
         ]
     },
     {
        "text": " set1 = {'tee', 'noey' ,'por', 'noyna'}\n          set2 = {'noey', 'sunthon', 'noyna', 'pop'}\nintersec = set1.intersection(set2)\nfor data in intersec:                           \nprint(data)                          ", # ข้อคำถาม9
         "bg": "Q1",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
         "choices": [ 
-            { "text": "tee         \nsunthon  y": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
-            { "text": "sunthon  \nnoyna    ": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            { "text": "noey       \nnoyna     ": 3, "isAnswer": True }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            { "text": "por       \nnoey     ": 4, "isAnswer": False }
+            { "text": "tee         \nsunthon  y", "id": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
+            { "text": "sunthon  \nnoyna    ", "id": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            { "text": "noey       \nnoyna     ", "id": 3, "isAnswer": True }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            { "text": "por       \nnoey     ", "id": 4, "isAnswer": False }
         ]
     },
     {
        "text": "word = "IT_KMITL"\nต้องprint()อย่างไรเพื่อที่จะแสดงผลลัพธ์ตัวสุดท้าย", # ข้อคำถาม10
         "bg": "Q2",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
         "choices": [ 
-            { "text": "word[-1]     ": 1, "isAnswer": True }, # text คือ ตัวเลือกที่จะแสดงผล
-            { "text": "word[6:8]    ": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            { "text": "word[4:]      ": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            { "text": "word[3:8]    ": 4, "isAnswer": False }
+            { "text": "word[-1]     ", "id": 1, "isAnswer": True }, # text คือ ตัวเลือกที่จะแสดงผล
+            { "text": "word[6:8]    ", "id": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            { "text": "word[4:]      ", "id": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            { "text": "word[3:8]    ", "id": 4, "isAnswer": False }
         ]
     },
     {
        "text": "ข้อใดเป็นตัวแปรชนิด list", # ข้อคำถาม11
         "bg": "Q1",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
         "choices": [ 
-            { "text": "a = {1, 2, 3, 4, 5}    ": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
-            { "text": "a = (1, 2, 3, 4, 5)    ": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            { "text": "a = <1, 2, 3, 4, 5> ": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            { "text": "a = [1, 2, 3, 4, 5]    ": 4, "isAnswer": True }
+            { "text": "a = {1, 2, 3, 4, 5}    ", "id": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
+            { "text": "a = (1, 2, 3, 4, 5)    ", "id": 2, "isAnswer": False },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            { "text": "a = <1, 2, 3, 4, 5> ", "id": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            { "text": "a = [1, 2, 3, 4, 5]    ", "id": 4, "isAnswer": True }
         ]
     },
     {
        "text": "ข้อใดมีผลลัพธ์ False?  ", # ข้อคำถาม12
         "bg": "Q2",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
         "choices": [ 
-            { "text": "True and True or False and True       ": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
-            { "text": "False and True or False and True      ": 2, "isAnswer": True },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            { "text": "True or (8-5 == 3) and True or False": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            { "text": "(2 >= 0) or (-5 <= -8)                         ": 4, "isAnswer": False }
+            { "text": "True and True or False and True       ", "id": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
+            { "text": "False and True or False and True      ", "id": 2, "isAnswer": True },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            { "text": "True or (8-5 == 3) and True or False", "id": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            { "text": "(2 >= 0) or (-5 <= -8)                         ", "id": 4, "isAnswer": False }
         ]
     },
     {
        "text": "คำสั่งที่ใช้ในการให้เต่าเคลื่อนที่ไปข้างหน้าคือคำสั่งอะไร?", # ข้อคำถาม13
         "bg": "Q1",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
         "choices": [ 
-            { "text": "backward()": 1, "isAnswer": False }, # text คือ ตัวเลือกที่จะแสดงผล
-            { "text": "forward()": 2, "isAnswer": True },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            { "text": "right()": 3, "isAnswer": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            { "text": "left()": 4, "isAnswer": False }
+            { "text": "backward()": 1, "isAnswer", "id": False }, # text คือ ตัวเลือกที่จะแสดงผล
+            { "text": "forward()": 2, "isAnswer", "id": True },  # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            { "text": "right()": 3, "isAnswer", "id": False }, # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            { "text": "left()": 4, "isAnswer", "id": False }
         ]
     },
     {
