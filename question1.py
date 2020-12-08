@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import Image, ImageTk
 def question1():
     def sel(): #ฟังก์ชัน
-        """1 ans"""
+        """1 ans"""#อธิบาย
         if str(var.get()) == "1":
             print("YES")
 
