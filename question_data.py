@@ -131,11 +131,26 @@ questions = [
             { "text": "left()": 4, "isAnswer": False }
         ]
     },
-
-
-
-
-]
-
-def get_rand_question():
-    return random.choice(questions)
+    {
+        "text": "คำสั่งใดใช้รับข้อมูลทางแป้นพิมพ์?",  # ข้อคำถาม14
+        "bg": "Q2",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "print()", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "compute()", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "output()", "id": 3, "isAnswer": False},
+            {"text": "input()", "id": 4, "isAnswer": True}
+        ]
+    },
+    {
+        "text": "error ที่เกิดจากความผิดพลาดของ algorithm \nของผู้เขียนโปรแกรมคือข้อใด?",  # ข้อคำถาม15
+        "bg": "Q1",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "Runtime Errors", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "Syntax Errors", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "Semantic  Errors", "id":
