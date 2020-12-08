@@ -153,4 +153,66 @@ questions = [
             # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
             {"text": "Syntax Errors", "id": 2, "isAnswer": False},
             # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
-            {"text": "Semantic  Errors", "id":
+            {"text": "Semantic  Errors", "id": 3, "isAnswer": True},
+            {"text": "Value  Errors", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "ข้อใดต่อไปนี้เป็น keyword ในภาษา Python 3 ทั้งหมด?",  # ข้อคำถาม16
+        "bg": "Q2",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "class, do, try", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "with, where, is", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "final, pass, assert", "id": 3, "isAnswer": False},
+            {"text": "assert, from, pass", "id": 4, "isAnswer": True}
+        ]
+    },
+    {
+        "text": "ข้อใดคือผลลัพธ์ของ 2** 3 ** 2 // 10 + 123 % 2 ?",  # ข้อคำถาม17
+        "bg": "Q1",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "7.4", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "52", "id": 2, "isAnswer": True},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "52.2", "id": 3, "isAnswer": False},
+            {"text": "7", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "ประเภทของข้อมูลใดที่เราควรใช้\nเพื่อจัดเก็บข้อมูลของจำนวนนักศึกษาในคลาสเรียน",  # ข้อคำถาม18
+        "bg": "Q2",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "int", "id": 1, "isAnswer": True},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "bool", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "float", "id": 3, "isAnswer": False},
+            {"text": "string", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "ข้อใดแสดงผลลัพธ์ Error?",  # ข้อคำถาม19
+        "bg": "Q1",  # รูปภาพพื้นหลัง ตอนนี้มีแค่ Q1 และ Q2
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "float('12'*3)", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "float('12'+'3')", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "float('12+3')", "id": 3, "isAnswer": True},
+            {"text": "float('1'*2+'3')", "id": 4, "isAnswer": False}
+        ]
+    },
+
+
+
+]
+
+def get_rand_question():
+    return random.choice(questions)
