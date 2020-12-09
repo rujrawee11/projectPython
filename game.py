@@ -37,7 +37,7 @@ class GameController:
             height=2, bg='#D2691E', font='consolas 13 bold').pack()
         Label(f2, textvariable=self.tv_result, fg="black",
               width=50).pack()  # scoreจะใส่bg
-        Label(f2, textvariable=self.tv_stat, fg="blue", width=50,
+        Label(f2, textvariable=self.tv_stat, fg="white", width=50,
               bg='#FFCC66', height=1).pack()  # จำนวนครั้งที่เล่นไปแล้ว
         Button(master, text="Quit", width=10, height=5, anchor='w', command=self.master.destroy).pack()
         self.master.mainloop()
