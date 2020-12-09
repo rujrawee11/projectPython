@@ -34,11 +34,11 @@ class GameController:
             w.pack(padx=15, pady=55)
         
         Label(f2, textvariable=self.tv_score, fg="white", width=44,
-            height=2, bg='red', font='consolas 13 bold').pack()
-        Label(f2, textvariable=self.tv_result, fg="blue",
+            height=2, bg='#D2691E', font='consolas 13 bold').pack()
+        Label(f2, textvariable=self.tv_result, fg="black",
               width=50).pack()  # scoreจะใส่bg
         Label(f2, textvariable=self.tv_stat, fg="blue", width=50,
-              bg='gold', height=1).pack()  # จำนวนครั้งที่เล่นไปแล้ว
+              bg='#FFCC66', height=1).pack()  # จำนวนครั้งที่เล่นไปแล้ว
         Button(master, text="Quit", width=10, height=5, anchor='w', command=self.master.destroy).pack()
         self.master.mainloop()
 
