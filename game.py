@@ -99,22 +99,23 @@ class GameController:
 
         var = IntVar()
 
+        _self = self
         def on_select_choice():
             choice_id = var.get()
             print('on_select_choice', choice_id)
             answer = next((choice for choice in question["choices"] if choice["id"] == choice_id), None)
-            self.p1_stat['QUESTION'] += 1
+            _self.p1_stat['QUESTION'] += 1
             if answer["isAnswer"] == True:
-                self.p1_stat['SCORE'] += 1
-                self.update_all_stat(f'PLAYER : Has answer the question correctly!')
-                self.check_win()
+                _self.p1_stat['SCORE'] += 1
+                _self.update_all_stat(f'PLAYER : Has answer the question correctly!')
+                _self.check_win()
             else:
-                self.update_all_stat(f'PLAYER : Has answer the question incorrectly!')
-            self.master.update_idletasks()
-            self.master.update()
-            self.master.lift()
-            self.master.attributes('-topmost', 1)
-            print('questionWindow', self.p1_stat)
+                _self.update_all_stat(f'PLAYER : Has answer the question incorrectly!')
+            _self.master.update_idletasks()
+            _self.master.update()
+            _self.master.lift()
+            _self.master.attributes('-topmost', 1)
+            print('questionWindow', _self.p1_stat)
             newWindow.destroy()
 
         pos_y = 190
@@ -135,7 +136,7 @@ class GameController:
             print('WIN the game!!!!')
             if messagebox.askokcancel("จบเกม", f'คุณชนะแล้ว!!!\nคะแนนที่ได้ {self.p1_stat["SCORE"]}'):
                 self.p1_stat = {'WINS': 0, 'LOSSES': 0, 'TIES': 0, 'QUESTION': 0, 'SCORE': 0}
-                self.update_all_stat()
+                self.update_all_stat('คุณชนะ')
                 self.master.destroy()
             return True
         else:
