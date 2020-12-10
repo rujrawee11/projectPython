@@ -261,6 +261,71 @@ questions = [
             {"text": "1 2 3 7 5", "id": 4, "isAnswer": False}
         ]
     },
+    {
+        "text": "name = set(['I', 'T', 'K', 'M', 'I', 'T', 'L'])\nprint(name)\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม24
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "'M', 'L', 'K', 'T', 'I'", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "M, L, K, T, I", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "{'M', 'L', 'K', 'T', 'I'}", "id": 3, "isAnswer": True},
+            {"text": "[{'M', 'L', 'K', 'T', 'I'}]", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "num = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}\nprint(num)\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม25
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "{1}", "id": 1, "isAnswer": True},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "{1, 1, 1, 1, 1, 1, 1, 1, 1, 1}", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "1, 1, 1, 1, 1, 1, 1, 1, 1, 1", "id": 3, "isAnswer": False},
+            {"text": "1", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "all_num = {[1, 2, 3], [4, 5, 6]}\nprint(all_num)\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม26
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "{[1, 2, 3], [4, 5, 6]}", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "[1, 2, 3], [4, 5, 6]", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "1, 2, 3, 4, 5, 6", "id": 3, "isAnswer": False},
+            {"text": "Error", "id": 4, "isAnswer": True}
+        ]
+    },
+    {
+        "text": "name = set(["tee", "noey", "por", "sunthorn"])\nname.discard("noey")\nname.discard("sunthorn")\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม27
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "'tee', 'por'", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "{“tee”, “por”}", "id": 2, "isAnswer": True},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "tee, por", "id": 3, "isAnswer": False},
+            {"text": "{'tee', 'por'}", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "usernames = ['Winwin', 'Kun', 'Lucus']\nallist = [1, 3.14, 'itkmitl', True, [5, 10, 'Hello']]\nuser_count = len(usernames)\nalist_size = len(allist)\nprint(user_count)\nprint(alist_size)\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม28
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "3\n5", "id": 1, "isAnswer": True},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "3\n7", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "1\n2", "id": 3, "isAnswer": False},
+            {"text": "1\n1", "id": 4, "isAnswer": False}
+        ]
+    },
 ]
 
 def get_rand_question():
