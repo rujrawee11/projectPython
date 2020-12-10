@@ -2,31 +2,34 @@ from instruction import *
 from game import *
 from tkinter import messagebox
 
-class WindowRoute: #ข้อมูลหรือตัวแปรที่กำหนดไว้ในคลาส เปรียบเหมือนตัวแปรสาธารณะเข้าถึงได้ทุกคลาส
-    def __init__(self, master): #การกำหนดค่าเริ่มต้นให้กับข้อมูลหรือตัวแปรที่รับมาเหมือนข้อมูลทั่วไป
+class WindowRoute:
+    def __init__(self, master):
         self.master = master
 
+    # สร้างหน้าต่างเกม เป่า ยิ้ง ฉุบ
     def startGame(self):
-        self.master.lower()
-        self.master.attributes('-topmost', 0)
-        self.newWindow = Toplevel(self.master)
-        self.newWindow.protocol("WM_DELETE_WINDOW", self.on_backing) # on close window
-        game = GameController(self.newWindow)
-        game.startRockPaperScissors()
-        # gameWindow(self.newWindow)
+        self.master.lower() # ยุบหน้าจอ main menu ลง (master นะที่นี้คือ หน้าต่าง main menu)
+        self.master.attributes('-topmost', 0) # ปรับลำดับหน้าจอ main menu ลงให้ต่ำสุด หรืออยู่ข้างล่างนั้นแหละ
+        self.newWindow = Toplevel(self.master) # สร้างหน้าใหม่ขึ้นมาซ้อนไว้
+        self.newWindow.protocol("WM_DELETE_WINDOW", self.on_backing) # เมื่อมีการปิดหน้าต่างให้ เรียกฟังก์ชัน on_backing ของ class นี้
+        game = GameController(self.newWindow) # สร้าง object จาก class GameController ขึ้นมา
+        game.startRockPaperScissors() # เรียกฟังก์ชัน startRockPaperScissors เพิ่มแสดงผลหน้าต่างเกม
     
+    # สร้างหน้าต่างวิธีเล่น
     def instruction(self):
-        self.master.lower()
-        self.master.attributes('-topmost', 0) 
-        self.newWindow = Toplevel(self.master)
-        self.newWindow.protocol("WM_DELETE_WINDOW", self.on_backing) # on close window
-        instructionWindow(self.newWindow)
+        self.master.lower() # ยุบหน้าจอ main menu ลง (master นะที่นี้คือ หน้าต่าง main menu)
+        self.master.attributes('-topmost', 0) # ปรับลำดับหน้าจอ main menu ลงให้ต่ำสุด หรืออยู่ข้างล่างนั้นแหละ
+        self.newWindow = Toplevel(self.master) # สร้างหน้าใหม่ขึ้นมาซ้อนไว้
+        self.newWindow.protocol("WM_DELETE_WINDOW", self.on_backing)  # เมื่อมีการปิดหน้าต่างให้ เรียกฟังก์ชัน on_backing ของ class นี้
+        instructionWindow(self.newWindow) # เรียกฟังก์ชัน instructionWindow เพิ่มแสดงผลหน้าต่างวิธีการเล่น
 
+    # event สำหรับกลับไปจอ main menu
     def on_backing(self):
-        self.master.lift()
-        self.master.attributes('-topmost', 1)
-        self.newWindow.destroy()
+        self.master.lift() # ขยายหรือนำหน้าจอ main menu กลับขึ้นมา (master นะที่นี้คือ หน้าต่าง main menu)
+        self.master.attributes('-topmost', 1) # ปรับลำดับหน้าจอ main menu ลงให้ขึ้นมาบนสุด
+        self.newWindow.destroy() # ทำลายหรือปืดหน้าต่างที่เปิดอยู่ เช่น หน้าต่างเกม หน้าวิธีเล่น
 
+    # event สร้าง dialog ให้ยืนยันก่อนปิดหน้าต่าง
     def on_closing(self):
-        if messagebox.showinfo("Quit", "Do you want to quit?"): #หน้าต่างแยก askokcancel
-            self.master.destroy() #คำสั่งปิดหน้าจอ
+        if messagebox.askokcancel("Quit", "Do you want to quit?"): # สร้าง dialog ให้ยืนยันก่อนปิดหน้าต่าง
+            self.master.destroy() # ทำลาย mian menu เพื่อปิดเกม
