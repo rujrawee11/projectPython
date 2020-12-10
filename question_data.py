@@ -208,7 +208,59 @@ questions = [
             {"text": "float('12+3')", "id": 3, "isAnswer": True},
             {"text": "float('1'*2+'3')", "id": 4, "isAnswer": False}
         ]
-    }
+    },
+    {
+        "text": "text = [banana, apple, [grape, watermelon]]\nprint(len(text))\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม20
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "3", "id": 1, "isAnswer": True},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "4", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "5", "id": 3, "isAnswer": False},
+            {"text": "6", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "text = ['pink', 'red', ['green', 'orange'], 'blue']\nprint((text[2][1]))\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม21
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "green", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "blue", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "orange", "id": 3, "isAnswer": True},
+            {"text": "blue", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "text = 'bAnAnA'\ntext = text.swapcase()\nprint(text)\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม22
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "bAnAnA", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "banana", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "BaNAnA", "id": 3, "isAnswer": False},
+            {"text": "BaNaNa", "id": 4, "isAnswer": True}
+        ]
+    },
+    {
+        "text": "number = [3, 5, 7, 1, 2] \nnumber.sort()\nprint(*number)\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม23
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "3 5 7 1 2", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "1 2 3 5 7", "id": 2, "isAnswer": True},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "7 5 3 2 1", "id": 3, "isAnswer": False},
+            {"text": "1 2 3 7 5", "id": 4, "isAnswer": False}
+        ]
+    },
 ]
 
 def get_rand_question():
