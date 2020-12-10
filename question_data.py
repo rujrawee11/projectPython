@@ -301,13 +301,13 @@ questions = [
         ]
     },
     {
-        "text": "name = set(["tee", "noey", "por", "sunthorn"])\nname.discard("noey")\nname.discard("sunthorn")\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม27
+        "text": "name = set(['tee', 'noey', 'por', 'sunthorn'])\nname.discard('noey')\nname.discard('sunthorn')\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม27
         "bg": "Q1",  # รูปภาพพื้นหลัง
         "choices": [
             # text คือ ตัวเลือกที่จะแสดงผล
             {"text": "'tee', 'por'", "id": 1, "isAnswer": False},
             # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
-            {"text": "{“tee”, “por”}", "id": 2, "isAnswer": True},
+            {"text": "{'tee', 'por'}", "id": 2, "isAnswer": True},
             # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
             {"text": "tee, por", "id": 3, "isAnswer": False},
             {"text": "{'tee', 'por'}", "id": 4, "isAnswer": False}
@@ -326,6 +326,84 @@ questions = [
             {"text": "1\n1", "id": 4, "isAnswer": False}
         ]
     },
+    {
+        "text": "text = ['a', 'b', 'c', 'd']\nprint(text.index('c'))\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม29
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "0", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "1", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "2", "id": 3, "isAnswer": True},
+            {"text": "3", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "text = ['a', 'b', 'c', 'd']\nprint(text.index('c'))\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม30
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "0", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "1", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "2", "id": 3, "isAnswer": True},
+            {"text": "3", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "ข้อใดคือคำที่ห้ามนำมาตั้งเป็นชื่อตัวเเปร ?",  # ข้อคำถาม31
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "low", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "height", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "elif", "id": 3, "isAnswer": True},
+            {"text": "banana", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "ข้อใดคือตัวดำเนินการที่หมายถึงการยกกำลังในภาษา python ?",  # ข้อคำถาม32
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "*", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "**", "id": 2, "isAnswer": True},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "***", "id": 3, "isAnswer": False},
+            {"text": "^", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "import ____ as pd \nควรเติมคำในข้อใดในช่องว่าง ?",  # ข้อคำถาม33
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "numpy", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "pandas", "id": 2, "isAnswer": True},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "math", "id": 3, "isAnswer": False},
+            {"text": "python", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "import ____ as np \nควรเติมคำในข้อใดในช่องว่าง ?",  # ข้อคำถาม34
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "numpy", "id": 1, "isAnswer": True},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "pandas", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "math", "id": 3, "isAnswer": False},
+            {"text": "python", "id": 4, "isAnswer": False}
+        ]
+    }
 ]
 
 def get_rand_question():
