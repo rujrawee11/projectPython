@@ -83,7 +83,7 @@ class GameController:
         self.update_all_stat(f'PLAYER : {p1_shape} - COM : {p2_shape} -> {result}')
 
     def questionWindow(self, newWindow):
-        print('questionWindow')
+        #print('questionWindow')
         newWindow.title("Question")  # ชื่อเกม
         newWindow.geometry("600x500")
         newWindow.option_add("*font", "Opun-Mai-Thin 10 bold")
@@ -120,7 +120,7 @@ class GameController:
 
         pos_y = 190
         for choice in question["choices"]:
-            print(choice)
+            #print(choice)
             choice_btn = Radiobutton(newWindow, text=choice["text"], width=15, height=3, variable=var, value=choice["id"],
                             bg="white", activebackground='green', command=on_select_choice)  # คำตอบแรก active bg = เปลี่ยนสีปุ่มตอนกด
             canvas.create_window(300, pos_y, anchor='center', window=choice_btn)
