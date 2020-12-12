@@ -301,7 +301,7 @@ questions = [
         ]
     },
     {
-        "text": "name = set(['tee', 'noey', 'por', 'sunthorn'])\nname.discard('noey')\nname.discard('sunthorn')\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม27
+        "text": "name = set(['tee', 'neay', 'por', 'sunthorn'])\nname.discard('neay')\nname.discard('sunthorn')\nได้ผลลัพธ์ตามข้อใด ?",  # ข้อคำถาม27
         "bg": "Q1",  # รูปภาพพื้นหลัง
         "choices": [
             # text คือ ตัวเลือกที่จะแสดงผล
@@ -402,6 +402,32 @@ questions = [
             # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
             {"text": "math", "id": 3, "isAnswer": False},
             {"text": "python", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "คีย์ลัดของการรันโปรแกรมคืออะไร",  # ข้อคำถาม35
+        "bg": "Q2",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": "F2", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": "F12", "id": 2, "isAnswer": False},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": "F5", "id": 3, "isAnswer": True},
+            {"text": "CTRL + ENTER", "id": 4, "isAnswer": False}
+        ]
+    },
+    {
+        "text": "นามสกุลไฟล์ source code ของ python เป็นแบบใด",  # ข้อคำถาม36
+        "bg": "Q1",  # รูปภาพพื้นหลัง
+        "choices": [
+            # text คือ ตัวเลือกที่จะแสดงผล
+            {"text": ".jpg", "id": 1, "isAnswer": False},
+            # id ให้เป็นเลขที่ไม่ซ้ำกัน เพื่อระบุตัวเลือก แนะนำ 1,2,3,4
+            {"text": ".py", "id": 2, "isAnswer": True},
+            # isAnswer คือ ตัวเลือกนี้เป็นคำตอบที่ถูกหรือไม่ True คือ คำตอบที่ถูกต้อง ส่วน False เป็นคำตอบที่ผิด
+            {"text": ".pyx", "id": 3, "isAnswer": False},
+            {"text": ".php", "id": 4, "isAnswer": False}
         ]
     }
 ]
